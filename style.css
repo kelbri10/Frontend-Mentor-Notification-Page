@@ -1,0 +1,37 @@
+*, *::before, *::after{ 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+:root{ 
+    /*primary colors*/
+    --clr-red: hsl(1, 90%, 64%); 
+    --clr-blue: Blue: hsl(219, 85%, 26%); 
+
+    /*neutral colors*/
+    --clr-white: hsl(0, 0%, 100%); 
+    --clr-lightGrayBlue-00: hsl(210, 60%, 98%)
+    --clr-lightGrayBlue-01: hsl(211, 68%, 94%); 
+    --clr-lightGrayBlue-02: hsl(205, 33%, 90%); 
+    --clr-grayBlue: hsl(219, 14%, 63%); 
+    --clr-darkGrayBlue-00: hsl(219, 12%, 42%); 
+    --clr-darkGrayBlue-01: hsl(224, 21%, 14%); 
+
+    /*typography*/
+    --fs-body: 1rem; 
+    --ff-primary: 'Plus Jakarta Sans', sans-serif;
+    --fw-medium: 500;  
+    --fw-extraBold: 800; 
+}
+
+body{ 
+    display: grid; 
+    grid-template-columns: 1fr;
+    place-items: center;
+}
+nav{ 
+    width: 100%; 
+    display: flex; 
+    justify-content: space-between;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Notifications page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <nav class="nav__bar">
+    <h1>Notifications <span class="number">3</span></h1>
+
+    <p>Mark all as read</p>
+  </nav>
+
+  <main class="notification__container">
+    <section class="newNotification text__wrapper">
+      <img src="/assets/images/avatar-mark-webber.webp" alt="mark webber profile picture">
+
+      <div>
+        <p><span class="post__author">Mark Webber</span>reacted to your recent post <a href="#" class="post__link">My first tournament today</a></p>
+        <p class="post__time">1m ago</p>
+      </div>
+    </section>
+  
+    <section class="newNotification text__wrapper">
+      <img src="/assets/images/avatar-angela-gray.webp" alt="angela gray profile picture">
+
+      <div>
+        <p><span class="post__author">Angela Gray</span> followed you</p>
+        <p class="post__time">5m ago</p>
+      </div>
+    </section>
+  
+    <section class="newNotification text__wrapper">
+      <img src="/assets/images/avatar-jacob-thompson.webp" alt="jacob thompson profile picture">
+      <div></div>
+      <p><span class="post__author">Jacob Thompson</span> has joined your group <a href="#" class="social__group">Chess Club</a></p>
+      <p class="post__time">1 day ago</p>
+    </section>
+  
+    <section class="text__wrapper">
+      <img src="/assets/images/avatar-rizky-hasanuddin.webp" alt="rizky hasanuddin profile picture">
+      <div></div>
+      <p><span class="post__author">Rizky Hasanuddin</span> sent you a private message</p>
+      <p class="post__time">5 days ago</p>
+      <p class="message__container">
+        Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.
+      </p>
+    </section>
+  
+    <section class="text__wrapper">
+      <img src="/assets/images/avatar-kimberly-smith.webp" alt="kimberly smith profile picture">
+      <div>
+
+      </div>
+      <p><span class="post__author">Kimberly Smith</span> commented on your picture</p>
+      <p class="post__time">1 week ago</p>
+    </section>
+  
+    <section class="text__wrapper">
+      <img src="/assets/images/avatar-nathan-peterson.webp" alt="nathan peterson profile picture">
+      <div>
+
+      </div>
+      <p><span class="post__author">Nathan Peterson</span> reacted to your recent post <a href="#" class="post__link">5 end-game strategies to increase your win rate</a></p>
+      <p class="post__time">2 weeks ago</p>
+    </section>
+  
+    <section class="text__wrapper">
+      <img src="/assets/images/avatar-anna-kim.webp" alt="anna kim profile picture">
+      <div>
+        <p><span class="post__author">Anna Kim</span> left the group <a href="#" class="post__group">Chess Club</a></p>
+        <p class="post__time">2 weeks ago</p>
+      </div>
+    </section>
+  </main>
+
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>
