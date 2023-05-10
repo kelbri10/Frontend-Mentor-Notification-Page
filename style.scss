@@ -1,0 +1,108 @@
+$red: hsl(1, 90%, 64%); 
+$blue: hsl(219, 85%, 26%);
+
+$white: hsl(0, 0%, 100%); 
+$veryLightGrayBlue: hsl(210, 60%, 98%); 
+$lightGrayBlue01: hsl(211, 68%, 94%); 
+$lightGrayBlue02: hsl(205, 33%, 90%); 
+$grayBlue: hsl(219, 14%, 63%); 
+$darkGrayBlue: hsl(219, 12%, 42%); 
+$veryDarkBlue: hsl(224, 21%, 14%); 
+
+$font-size: 1rem; 
+$font-stack: Plus Jakarta Sans, sans-serif; 
+$fw-bold: 500; 
+$fw-veryBold: 800; 
+
+@mixin link() { 
+    font-weight: $fw-veryBold; 
+    text-decoration: none;
+}
+
+body{
+    width: 100%; 
+}
+
+main{ 
+    font-family: $font-stack; 
+    width: min(90%, 800px); 
+    nav{ 
+        display: flex; 
+        flex-direction: row; 
+        justify-content: space-between; 
+        align-items: center;
+
+        h1{  
+            font-size: 1.25rem;  
+
+            span{ 
+                background-color: $blue; 
+                color: $white; 
+                padding: 0.25rem 0.65rem;
+                border-radius: 10px; 
+
+                font-size: $font-size; 
+            }
+        }
+
+        p{ 
+            font-size: $font-size; 
+            color: $darkGrayBlue; 
+        }
+    }
+}
+
+section{
+    &.text__wrapper{ 
+        display: flex; 
+        flex-direction: row; 
+        gap: 1rem;  
+        margin: 1rem; 
+        padding: 1rem; 
+        font-size: 0.85rem;  
+    
+        &.newNotification{
+            background-color: $veryLightGrayBlue;
+            border-radius: 10px;
+        
+        }
+        img{  
+            height: 50px; 
+            object-fit: contain;
+        }
+    
+        div{ 
+            display: flex; 
+            flex-direction: column; 
+            text-align: left; 
+    
+            p{
+                
+                color: $darkGrayBlue; 
+                margin: 0;
+                line-height: 1.5;  
+                .post__author{ 
+                    color: $veryDarkBlue; 
+                    font-weight: $fw-veryBold; 
+                }
+                a.post__group{ 
+                    @include link; 
+                    color: $blue; 
+                }
+                a.post__link{ 
+                    @include link;
+                    color: $darkGrayBlue; 
+                }
+            }
+            p.post__time{ 
+                color: $grayBlue; 
+            }
+            p.message__container{ 
+                 border: 1px solid $grayBlue; 
+                 padding: 1rem; 
+            }
+        }
+    }
+
+}
+
