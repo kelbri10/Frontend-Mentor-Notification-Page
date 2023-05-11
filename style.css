@@ -1,14 +1,14 @@
-section.text__wrapper div p a.post__link, section.text__wrapper div p a.post__group {
+section.text__wrapper .text__container p a.post__link, section.text__wrapper .text__container p a.post__group, section.text__wrapper .text__container p .post__author {
   font-weight: 800;
   text-decoration: none;
 }
-section.text__wrapper div p a.post__link:hover, section.text__wrapper div p a.post__group:hover {
+section.text__wrapper .text__container p a.post__link:hover, section.text__wrapper .text__container p a.post__group:hover, section.text__wrapper .text__container p .post__author:hover {
   color: hsl(219, 85%, 26%);
 }
 
 body {
   min-height: 100vh;
-  background-color: hsl(211, 68%, 94%);
+  background-color: hsl(210, 60%, 98%);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -29,6 +29,7 @@ main nav {
 }
 main nav h1 {
   font-size: 1.25rem;
+  color: hsl(224, 21%, 14%);
 }
 main nav h1 span {
   background-color: hsl(219, 85%, 26%);
@@ -57,42 +58,56 @@ section.text__wrapper {
 section.text__wrapper.newNotification {
   background-color: hsl(210, 60%, 98%);
   border-radius: 10px;
+  border: hsl(224, 21%, 14%) 2px solid;
+}
+section.text__wrapper.newNotification::after {
+  content: "";
+  background-color: hsl(1, 90%, 64%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
 }
 section.text__wrapper img {
   height: 50px;
   object-fit: contain;
 }
-section.text__wrapper div {
+section.text__wrapper .text__container {
   display: flex;
   flex-direction: column;
   text-align: left;
 }
-section.text__wrapper div p {
+section.text__wrapper .text__container p {
   color: hsl(219, 12%, 42%);
   margin: 0;
   line-height: 1.5;
 }
-section.text__wrapper div p .post__author {
-  cursor: pointer;
+section.text__wrapper .text__container p .post__author {
   color: hsl(224, 21%, 14%);
   font-weight: 800;
+  cursor: pointer;
 }
-section.text__wrapper div p a.post__link, section.text__wrapper div p a.post__group {
+section.text__wrapper .text__container p a.post__link, section.text__wrapper .text__container p a.post__group {
   color: hsl(219, 12%, 42%);
   cursor: pointer;
 }
-section.text__wrapper div p.post__time {
+section.text__wrapper .text__container p.post__time {
   color: hsl(219, 14%, 63%);
 }
-section.text__wrapper div p.message__container {
+section.text__wrapper .text__container p.message__container {
   border: 1px solid hsl(205, 33%, 90%);
   border-radius: 5px;
   margin-top: 1rem;
   padding: 1rem;
 }
-section.text__wrapper div p.message__container:hover {
+section.text__wrapper .text__container p.message__container:hover {
   background-color: hsl(210, 60%, 98%);
   cursor: pointer;
+}
+section.text__wrapper .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

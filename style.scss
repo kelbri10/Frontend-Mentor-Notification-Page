@@ -24,7 +24,7 @@ $fw-veryBold: 800;
 
 body{
     min-height: 100vh; 
-    background-color: $lightGrayBlue01;
+    background-color: $veryLightGrayBlue;
     display: flex; 
     flex-direction: column;
     justify-content: center;
@@ -44,7 +44,7 @@ main{
         
         h1{  
             font-size: 1.25rem;  
-
+            color: $veryDarkBlue; 
             span{ 
                 background-color: $blue; 
                 color: $white; 
@@ -71,7 +71,7 @@ section{
 
     &.text__wrapper{ 
         display: flex; 
-        flex-direction: row; 
+        flex-direction: row;
         gap: 1rem;  
         margin: 1rem; 
         padding: 1rem; 
@@ -80,6 +80,15 @@ section{
         &.newNotification{
             background-color: $veryLightGrayBlue;
             border-radius: 10px;
+            border: $veryDarkBlue 2px solid; 
+            &::after{ 
+                content: ''; 
+                background-color: $red; 
+                width: 10px; 
+                height: 10px; 
+                border-radius: 50%; 
+        
+            }
         
         }
         img{  
@@ -87,7 +96,7 @@ section{
             object-fit: contain;
         }
     
-        div{ 
+        .text__container{ 
             display: flex; 
             flex-direction: column; 
             text-align: left; 
@@ -98,9 +107,10 @@ section{
                 margin: 0;
                 line-height: 1.5;  
                 .post__author{ 
-                    cursor: pointer; 
+                    @extend %link; 
                     color: $veryDarkBlue; 
                     font-weight: $fw-veryBold; 
+                    cursor: pointer;
                 }
                 a.post__link, a.post__group{ 
                     @extend %link; 
@@ -108,6 +118,8 @@ section{
                     cursor: pointer; 
                 }
             }
+            
+          
             p.post__time{ 
                 color: $grayBlue; 
             }
@@ -122,6 +134,13 @@ section{
                     cursor: pointer;
                 }
             }
+        }
+
+        .container{ 
+            display: flex; 
+            flex-direction: row; 
+            justify-content: space-between;
+            width: 100%; 
         }
     }
 
