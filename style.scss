@@ -75,19 +75,21 @@ section{
         gap: 1rem;  
         margin: 1rem; 
         padding: 1rem; 
-        font-size: $font-size;  
+        font-size: 0.85rem;  
     
         &.newNotification{
             background-color: $veryLightGrayBlue;
             border-radius: 10px;
-            border: $veryDarkBlue 2px solid; 
-            &::after{ 
-                content: ''; 
-                background-color: $red; 
-                width: 10px; 
-                height: 10px; 
-                border-radius: 50%; 
-        
+
+            div p:first-child{ 
+                .dot{ 
+                    display: inline-block; 
+                    background-color: $red;
+                    border-radius: 50%;  
+                    width: 10px; 
+                    height: 10px; 
+                    margin-left: 1rem; 
+                }
             }
         
         }

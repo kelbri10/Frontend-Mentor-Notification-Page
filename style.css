@@ -53,19 +53,19 @@ section.text__wrapper {
   gap: 1rem;
   margin: 1rem;
   padding: 1rem;
-  font-size: 1rem;
+  font-size: 0.85rem;
 }
 section.text__wrapper.newNotification {
   background-color: hsl(210, 60%, 98%);
   border-radius: 10px;
-  border: hsl(224, 21%, 14%) 2px solid;
 }
-section.text__wrapper.newNotification::after {
-  content: "";
+section.text__wrapper.newNotification div p:first-child .dot {
+  display: inline-block;
   background-color: hsl(1, 90%, 64%);
+  border-radius: 50%;
   width: 10px;
   height: 10px;
-  border-radius: 50%;
+  margin-left: 1rem;
 }
 section.text__wrapper img {
   height: 50px;
