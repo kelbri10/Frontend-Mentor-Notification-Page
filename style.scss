@@ -14,18 +14,21 @@ $font-stack: Plus Jakarta Sans, sans-serif;
 $fw-bold: 500; 
 $fw-veryBold: 800; 
 
-@mixin link() { 
+%link { 
     font-weight: $fw-veryBold; 
     text-decoration: none;
+    &:hover{ 
+        color: $blue; 
+    }
 }
 
 body{
-     min-height: 100vh; 
+    min-height: 100vh; 
     background-color: $lightGrayBlue01;
-     display: flex; 
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 main{ 
@@ -55,6 +58,11 @@ main{
         p{ 
             font-size: $font-size; 
             color: $darkGrayBlue; 
+            cursor: pointer; 
+
+            &:hover{ 
+                color: $blue;
+            }
         }
     }
 }
@@ -94,13 +102,8 @@ section{
                     color: $veryDarkBlue; 
                     font-weight: $fw-veryBold; 
                 }
-                a.post__group{ 
-                    @include link; 
-                    color: $blue; 
-                    cursor: pointer; 
-                }
-                a.post__link{ 
-                    @include link;
+                a.post__link, a.post__group{ 
+                    @extend %link; 
                     color: $darkGrayBlue; 
                     cursor: pointer; 
                 }
@@ -109,10 +112,15 @@ section{
                 color: $grayBlue; 
             }
             p.message__container{ 
-                 border: 1px solid $lightGrayBlue02; 
-                 border-radius: 5px;
-                 margin-top: 1rem; 
-                 padding: 1rem; 
+                border: 1px solid $lightGrayBlue02; 
+                border-radius: 5px;
+                margin-top: 1rem; 
+                padding: 1rem; 
+
+                &:hover{ 
+                    background-color: $veryLightGrayBlue; 
+                    cursor: pointer;
+                }
             }
         }
     }
